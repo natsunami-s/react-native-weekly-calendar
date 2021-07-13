@@ -241,7 +241,7 @@ const WeeklyCalendar = props => {
                 key={index}
                 disabled={props.disabled || getIsBeforeMinDate(item)}
               >
-                <View style={[styles.weekDayNumberCircle, isPreselectedDate(item) && styles.preselectedWeekdayCircle, isCalendarReady && isSelectedDate(item) && styles.selectedWeekdayCircle, props.selectedDayStyle]}>
+                <View style={[styles.weekDayNumberCircle, isPreselectedDate(item) && styles.preselectedWeekdayCircle, isCalendarReady && isSelectedDate(item) && [styles.selectedWeekdayCircle, props.selectedDayStyle]]}>
                   <Text style={[styles.weekDayNumberText, isPreselectedDate(item) && styles.preselectedWeekdayNumberText, isCalendarReady && isSelectedDate(item) && styles.weekDayNumberTextToday, getIsBeforeMinDate(item) && styles.disabledWeekDayNumberText, props.dayNumberStyle]}>
                     {isCalendarReady ? item.date() : ''}
                   </Text>
